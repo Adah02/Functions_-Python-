@@ -1,8 +1,8 @@
 import cube
-import unittest
-#from unittest import TestCase
+#import unittest
+from unittest import TestCase
 
-class TestCube(unittest.TestCase):
+class TestCube(TestCase):
 #'self' means it belongs to the class
 
 	def test_that_cube_get_cube_function_exists(self):
