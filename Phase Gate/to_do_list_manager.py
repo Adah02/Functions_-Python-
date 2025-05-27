@@ -32,7 +32,6 @@ def delete_a_task(delete_item, task_list):
       return task_list;
     
     
- 
 
 print('''
     1. Add a task
