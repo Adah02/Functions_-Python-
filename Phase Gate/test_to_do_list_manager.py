@@ -10,9 +10,14 @@ class test_for_to_do_list_manager(TestCase):
     expected = ['buy books', 'buy phone']
     self.assertEqual(check, expected)
 
-  def view_task(self):
-    list = ['buy books', 'buy phone', ]
-    search = 'buy phone';
+  def test_to_view_tasks_in_to_do_list_manager(self):
+    search = ['buy books', 'buy phone', ]
+    list = list;
     check = to_do_list_manager.view_task(list, search)
+    expected = ['buy books', 'buy phone']
+    self.assertEqual(check, expected)
+
+  def test_to_mark_item_in_to_do_list_manager(self):
+    check = to_do_list_manager.mark_task_as_complete()
     expected = ['buy books', 'buy phone']
     self.assertEqual(check, expected)

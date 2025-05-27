@@ -27,9 +27,13 @@ def delete_a_task(delete_item, task_list):
   users_choice = str.toLower(delete_item)
   counter = 0;
   for item in task_list:
-
-
-     
+    counter += 1
+    if item == users_choice:
+      task_list = task_list.pop(counter);
+      return task_list;
+    else:
+      return 'Invalid input'
+ 
 
 print('''
     1. Add a task
