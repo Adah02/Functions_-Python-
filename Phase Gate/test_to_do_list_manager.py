@@ -18,6 +18,8 @@ class test_for_to_do_list_manager(TestCase):
     self.assertEqual(check, expected)
 
   def test_to_mark_item_in_to_do_list_manager(self):
-    check = to_do_list_manager.mark_task_as_complete()
-    expected = ['buy books', 'buy phone']
+    list = ['buy books', 'fix phone', 'pay fees']
+    delete = 'pay fees';
+    check = to_do_list_manager.delete_a_task(delete, list)
+    expected = ['buy books', 'fix phone']
     self.assertEqual(check, expected)
