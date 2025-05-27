@@ -29,3 +29,15 @@ class TestAccount(TestCase):
     check = account.withdraw_funds(1000, 600)
     expected = 400;
     self.assertEqual(check, expected)
+
+  def test_bank_account_search(self):
+    accounts = [['Justin Odu', 8147736633, '08147736633'],['Jihadeen Olu', 8147936738, '08147936738']];
+    search = 8147736633
+    check = account.search_for_account(accounts, search)
+    expected = accounts[0];
+    self.assertEqual(check, expected);
+
+
+
+
+

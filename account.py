@@ -45,7 +45,7 @@ def search_for_account(accounts, search_item):
     response = 'No account with such detail';
     return response;
         
-accounts = [["Emma Adah", 8160509785, '08160509785'],["Jason Uba", 9052969013, '09052969013'],["Dan Abah", 9157898543, '09157898543'],["Annie Uba", 7076564433, '07076564433'],["Annie Uba", 7076564433, '']];
+accounts = [["Emma Adah", 8160509785, '08160509785'],["Jason Uba", 9052969013, '09052969013'],["Dan Abah", 9157898543, '09157898543'],["Annie Uba", 7076564433, '07076564433'],["Annie Uba", 7076564433, '07076564433']];
 
 search_item = 8160509785;
 
@@ -57,7 +57,6 @@ balance = 5000;
 deposit_amount = 500;
 transfer_amount = 1500;
 withdraw_amount = 0;
-
 
 print('Your account name is',set_account_name(set_name))
 print('Your account number is',set_account_number(set_acc_number))
