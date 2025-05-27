@@ -3,7 +3,7 @@ def add_a_task(task_list, task):
   task_list.append(task);
   return task_list;
   
-def view_task(view_task, task_list):
+def view_tasks(view_task, task_list):
   #To view task in the to-do-list.
   users_choice = str.toLower(view_task);
   if view_task == users_choice:
@@ -16,23 +16,19 @@ def mark_task_as_complete(mark_task, task_list):
   index = 0;
   for item in task_list:
     index += 1;
-    users_choice = str.toLower(mark_task);
-    if item == users_choice:
+    if item == mark_task:
       item[index].append = 'X'
     else:
       return 'Invalid entry'
 
 def delete_a_task(delete_item, task_list):
   #To delete item from your to do list.
-  users_choice = str.toLower(delete_item)
   counter = 0;
   for item in task_list:
-    counter += 1
-    if item == users_choice:
+    if item == delete_item:
       task_list = task_list.pop(counter);
       return task_list;
-    else:
-      return 'Invalid input'
+    counter += 1
  
 
 print('''
@@ -59,7 +55,7 @@ while True:
       mark_task = input('Enter the task to mark: ')
       break
     case 4:
-      delete_item = input('Enter task name: ')
+      delete_item = str(input('Enter task name: '))
       break
     case 5:
       print('Good-Bye...!')
@@ -71,5 +67,12 @@ while True:
 
 
 task_list = ['Buy gloceries','Finish homework'];
-print(task_list)
+
+for item in task_list:
+  print(delete_a_task(delete_item, task_list))
+
+
+
+
+
   

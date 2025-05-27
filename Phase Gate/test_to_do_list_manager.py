@@ -13,7 +13,7 @@ class test_for_to_do_list_manager(TestCase):
   def test_to_view_tasks_in_to_do_list_manager(self):
     search = ['buy books', 'buy phone', ]
     list = list;
-    check = to_do_list_manager.view_task(list, search)
+    check = to_do_list_manager.view_tasks(list, search)
     expected = ['buy books', 'buy phone']
     self.assertEqual(check, expected)
 
