@@ -1,9 +1,11 @@
 import to_do_list_manager;
 from unittest import TestCase;
 
-class test_for_to_do_list_manager(TestCase);
+class test_for_to_do_list_manager(TestCase):
 
   def test_add_a_task(self):
-    check = (add_a_task());
-    expected = 
-    
+    list = ['buy books']
+    add = 'buy phone'
+    check = to_do_list_manager.add_a_task(list, add)
+    expected = ['buy books', 'buy phone']
+    self.assertEqual(check, expected)

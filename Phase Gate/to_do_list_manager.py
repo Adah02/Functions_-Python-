@@ -1,6 +1,6 @@
 def add_a_task(task_list, task):
   #To add a task to your to-do list.
-  task_list.append = (task);
+  task_list.extend = task;
   return task_list;
   
 def view_task(view_task, task_list):
@@ -9,16 +9,14 @@ def view_task(view_task, task_list):
   if view_task == users_choice:
     return task_list
   else:
-    return 'Invalid input';
-
+    return 'Invalid input';  
+  
 def mark_task_as_complete(mark_task, task_list):
   for item in task_list:
-    users_entry = str.toLower(mark_task)
-    if item == 
-  
-  
-  
-  
+    users_choice = str.toLower(mark_task);
+    if item == users_choice:
+      
+
 print('''
     1. Add a task
     2. View tasks
@@ -31,7 +29,8 @@ while True:
   user_selection = int(input('Enter your choice: '))
   match user_selection:
     case 1:
-      task = input('Enter the task: ')
+      task = str(input('Enter the task: '))
+      break
       back = int(input('Enter \'0\' to go back: '))
       if back == 0:
         user_selection = True;
@@ -54,4 +53,5 @@ while True:
 
 
 task_list = ['Buy gloceries','Finish homework'];
+print(task_list)
   
