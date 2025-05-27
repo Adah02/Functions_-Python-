@@ -25,10 +25,13 @@ def delete_a_task(delete_item, task_list):
   #To delete item from your to do list.
   counter = 0;
   for item in task_list:
-    if item == delete_item:
-      task_list = task_list.pop(counter);
+    if item != delete_item:
+      counter += 1
+    elif item == delete_item:
+      task_list.pop(counter);
       return task_list;
-    counter += 1
+    
+    
  
 
 print('''
@@ -45,9 +48,6 @@ while True:
     case 1:
       task = str(input('Enter the task: '))
       break
-      back = int(input('Enter \'0\' to go back: '))
-      if back == 0:
-        user_selection = True;
     case 2:
       view_task = input('Enter list to view tasks: ')
       break
@@ -66,7 +66,7 @@ while True:
     
 
 
-task_list = ['Buy gloceries','Finish homework'];
+task_list = ['Buy gloceries','Transport','Finish homework', ];
 
 for item in task_list:
   print(delete_a_task(delete_item, task_list))
